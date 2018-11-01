@@ -20,8 +20,8 @@ public class Start
 
         for (int i = 0; i < byteSize * 1024 * 1024; i++) {
 
-            sourceBytes[i] = Byte.parseByte(String.valueOf((i + 100 + i * new Random().nextInt()) % 128));
-            LOGGER.info(String.valueOf(sourceBytes[i]));
+            sourceBytes[i] = Byte.parseByte(String.valueOf((i + 100 + i * new Random().nextInt(8)) % 128));
+            //LOGGER.info(String.valueOf(sourceBytes[i]));
         }
 
         testCompress(sourceBytes,"gz",15);
