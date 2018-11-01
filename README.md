@@ -10,6 +10,7 @@ private static long compress(String compressType,byte [] sourceBytes) throws Exc
     ICompressor compressor = Compressor.getCompressor(compressType, enableCompress);
 
     long start = System.currentTimeMillis();
+  
     byte[] targetBytes = compressor.compress(sourceBytes);
 
     long costMills = System.currentTimeMillis() - start;
@@ -17,4 +18,5 @@ private static long compress(String compressType,byte [] sourceBytes) throws Exc
     LOGGER.info("compress rate:"+(((targetBytes.length*1.0)/sourceBytes.length)*100)+"%");
 
     return costMills;
+    
     }
