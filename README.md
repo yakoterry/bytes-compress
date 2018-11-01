@@ -14,9 +14,6 @@ private static long compress(String compressType,byte [] sourceBytes) throws Exc
 
     long costMills = System.currentTimeMillis() - start;
 
-    //LOGGER.info("sourceBytes length:" + sourceBytes.length);
-    //LOGGER.info("targetBytes length:" + targetBytes.length);
-    //LOGGER.info("compress cost:" + costMills + " mills,with: " + compressor.getSuffix());
     LOGGER.info("compress rate:"+(((targetBytes.length*1.0)/sourceBytes.length)*100)+"%");
 
     return costMills;
